@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Feedback Form</title>
+    <link rel="stylesheet" href="FeedBack.css">
+    <script>
+        function validateForm() {
+            var name = document.getElementById("name").value.trim();
+            var email = document.getElementById("email").value.trim();
+            var rating = document.getElementById("rating").value;
+            var comment = document.getElementById("comment").value.trim();
+
+            // Validation for required fields
+            if (name === '' || rating === '' || comment === '') {
+                alert("Please fill in all required fields.");
+                return false;
+            }
+
+            // Validation for email format
+            var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (email !== '' && !email.match(emailPattern)) {
+                alert("Please enter a valid email address.");
+                return false;
+            }
+
+            return true;
+        }
+
+        function previewForm() {
+            var name = document.getElementById("name").value.trim();
+            var email = document.getElementById("email").value.trim();
+            var rating = document.getElementById("rating").value;
+            var comment = document.getElementById("comment").value.trim();
+
+            var previewText = "Name: " + name + "\n";
+            previewText += "Email: " + email + "\n";
+            previewText += "Rating: " + rating + "\n";
+            previewText += "Comment: " + comment;
+
+            alert("Preview:\n\n" + previewText);
+        }
+    </script>
+</head>
+<body>
+
+  <div class="navbar">
+    <a href="#" class="active">FeedBack</a>
+    <a href="Home.html">Home</a>
+    <a href="UserProfile.html">User Profile</a>
+    <a href="Teamspage.html">Team</a>
+    <a href="Shop.html">Shop</a>
+    <a href="Gallery.html">Gallery</a>
+    <a href="pageEditor.html">Page Editor</a>
+    <a href="Content.html">Content</a>
+        </div>
+
+  <header class="header">
+      <div class="Logo">
+          <img src="Logo.png" alt="Zero Hunger Logo" class="logo">
+          </div>
+
+    <div class="FF">
+        <h1>Feedback Form</h1>
+        <form onsubmit="return validateForm();" action="submit_form.php" method="post">
+            <label for="name">Name <span>*</span></label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email">
+
+            <label for="rating">Rating <span>*</span></label>
+            <select id="rating" name="rating" required>
+                <option value="">Select Rating</option>
+                <option value="1">1 - Poor</option>
+                <option value="2">2 - Fair</option>
+                <option value="3">3 - Average</option>
+                <option value="4">4 - Good</option>
+                <option value="5">5 - Excellent</option>
+            </select>
+
+            <label for="comment">Comment <span>*</span></label>
+            <textarea id="comment" name="comment" rows="4" required></textarea>
+
+            <div class="form-buttons">
+                <input type="button" value="Preview" onclick="previewForm();">
+                <input type="submit" value="Submit">
+            </div>
+        </form>
+    </div>
+
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 FeedBack  | Designed by Hammad Shahzad</p>
+        </div>
+    </footer>
+</body>
+</html>

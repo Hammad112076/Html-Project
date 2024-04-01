@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<!-- Refernces used https://www.google.com/imgres?imgurl=https%3A%2F%2Fnats-solutions.com%2Fupload%2Fimages%2Four-vision-drawn-white-brick-wall-d-inscription-modern-illustation-blue-arrow-hand-icons-around-brickwall-89018617.jpg&tbnid=ucIUqQSCLAqE4M&vet=12ahUKEwiw2YSr_qCFAxWrTKQEHRfMAH0QMygPegUIARCMAQ..i&imgrefurl=https%3A%2F%2Fnats-solutions.com%2Fproduct.php%3Fid%3D16&docid=Eu9MlqGSJvjYEM&w=800&h=450&q=our%20vision&ved=2ahUKEwiw2YSr_qCFAxWrTKQEHRfMAH0QMygPegUIARCMAQ
+https://www.google.com/imgres?imgurl=https%3A%2F%2Fwww.shutterstock.com%2Fimage-illustration%2Four-goals-word-hanging-on-260nw-556652665.jpg&tbnid=Ih7dkuTDu22hIM&vet=12ahUKEwjOk8bA_qCFAxXyU6QEHaLzAakQMygIegUIARCFAQ..i&imgrefurl=https%3A%2F%2Fwww.shutterstock.com%2Fimage-illustration%2Four-goals-word-hanging-on-blue-556652665&docid=g-T41M6cApO2PM&w=693&h=280&q=our%20goals&ved=2ahUKEwjOk8bA_qCFAxXyU6QEHaLzAakQMygIegUIARCFAQ
+https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRN4oqb65jM59ZfIq_wA3ZX8_qM0ljNbQX_lA&usqp=CAU  -->
+<html>
+<head>
+    <title>Food for All - Content Page</title>
+    <link rel="stylesheet" href="Content.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <div class="navbar">
+        <a href="#" class="active">Content</a>
+        <a href="UserProfile.html">User Profile</a>
+        <a href="Teamspage.html">Team</a>
+        <a href="Shop.html">Shop</a>
+        <a href="Gallery.html">Gallery</a>
+        <a href="pageEditor.html">Page Editor</a>
+        <a href="FeedBack.html">FeedBack</a>
+        <a href="Content.html">Content</a>
+    </div>
+
+    <!-- Page Content -->
+    <div class="Header">
+        <div class="Logo">
+              <img src="Logo.png" alt="Zero Hunger Logo" class="logo">
+              </div>
+        <h1>Food for All </h1>
+        <br>
+      </div>
+
+        <!-- Content Section 1 - Picture on Right -->
+        <div class="FoodForall ">
+            <p>
+                The Food for All Campaign is an area-driven initiative committed to making sure accessibility to nourishing food for everybody no matter their socio-economic condition. Our team believe that every person can healthy and balanced together with lasting food alternatives.
+            </p>
+            <img src="FoodForall.Jpg" alt="Right Image">
+        </div>
+
+        <div class="Header">
+            <h1>Our vision</h1>
+            <br>
+          </div>
+        <!-- Content Section 2 - Picture on Left -->
+        <div class="vision">
+              <img src="OurVision.Jpg" alt="Right Image">
+            <p>
+                Our vision is a globe where no one goes starving where areas are encouraged to expand together with gain access to healthy and balanced foods plus where food waste is decreased with lasting methods.
+            </p>
+        </div>
+
+
+
+
+
+            <div class="Header">
+                <h1>Our Goals</h1>
+                <br>
+              </div>
+
+              <div class="Goals">
+
+        <ul>
+            <li>Advertise lasting as well as fair food systems</li>
+            <li>Encourage neighborhood farmers and also manufacturers</li>
+            <li>Supply education and learning on nourishment as well as food prep work</li>
+            <li>Decrease food waste together with advertise recycling</li>
+            <li>Develop neighborhood yards as well as city farming campaigns</li>
+        </ul>
+          <img src="Ourgoals.Jpg" alt="right Image">
+          </div>
+
+
+          <div class="Header">
+              <h1>How You Can Help</h1>
+              <br>
+            </div>
+
+          <div class="Help">
+        <p>
+            There are several means one can obtain entailed with the Food for All Campaign and also add to our objective:
+        </p>
+
+        <ul>
+            <li>Volunteer at local food banks or community kitchens</li>
+            <li>Donate funds or food items to support those in need</li>
+            <li>Participate in food drives and awareness campaigns</li>
+            <li>Spread the word on social media and advocate for food justice</li>
+            <li>Start a community garden or join an existing urban farming project</li>
+        </ul>
+
+        <p>
+            Together, we can make a difference and work towards a future where everyone has access to nutritious and sustainable food.
+        </p>
+    </div>
+
+    <!-- "Go to Top" Button -->
+    <button onclick="scrollToTop()" class="scroll-to-top" id="goTopBtn">Go to Top</button>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Content | Designed by Hammad Shahzad</p>
+        </div>
+    </footer>
+
+
+    <!-- JavaScript for "Go to Top" Button -->
+    <script>
+        // Function to scroll to top of the page smoothly
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        }
+
+
+        // Show or hide the "Go to Top" button based on scroll position
+        window.onscroll = function() {
+            var goTopBtn = document.getElementById("goTopBtn");
+
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                goTopBtn.classList.add("show");
+            } else {
+                goTopBtn.classList.remove("show");
+            }
+        };
+    </script>
+</body>
+</html>
