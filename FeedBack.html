@@ -52,16 +52,15 @@
     <a href="Gallery.html">Gallery</a>
     <a href="pageEditor.html">Page Editor</a>
     <a href="Content.html">Content</a>
-        </div>
+  </div>
 
   <header class="header">
-      <div class="Logo">
-          <img src="Logo.png" alt="Zero Hunger Logo" class="logo">
-          </div>
-
+    <div class="Logo">
+      <img src="Logo.png" alt="Zero Hunger Logo" class="logo">
+    </div>
     <div class="FF">
         <h1>Feedback Form</h1>
-        <form onsubmit="return validateForm();" action="submit_form.php" method="post">
+        <form onsubmit="return validateForm();" action="javascript:void(0);" method="post">
             <label for="name">Name <span>*</span></label>
             <input type="text" id="name" name="name" required>
 
@@ -86,13 +85,32 @@
                 <input type="submit" value="Submit">
             </div>
         </form>
+        <!-- Confirmation Message -->
+        <div id="confirmation" style="display: none;">
+            <p>Thank you for your feedback! Your comment has been submitted.</p>
+        </div>
     </div>
-
+  </header>
 
     <footer class="footer">
         <div class="container">
             <p>&copy; 2024 FeedBack  | Designed by Hammad Shahzad</p>
         </div>
     </footer>
+
+    <!-- JavaScript for Confirmation Message -->
+    <script>
+        // Function to display confirmation message
+        function displayConfirmation() {
+            document.getElementById("confirmation").style.display = "block";
+        }
+
+
+        document.querySelector("form").addEventListener("submit", function(event) {
+            event.preventDefault();
+            validateForm(); // Run form validation
+            displayConfirmation(); // Display confirmation message
+        });
+    </script>
 </body>
 </html>
